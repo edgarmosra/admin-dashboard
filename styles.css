@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -16,7 +17,6 @@
 
 .sidebar {
   grid-row: 1 / 3;
-  border: solid black;
   display: grid;
   grid-template-rows: 1fr 3fr 6fr;
   background-color: #1892d4;
@@ -47,7 +47,6 @@ ul {
 
 li {
   margin: 10px 0;
-  /* border: solid; */
   font-size: 1.1rem;
   display: flex;
 }
@@ -62,11 +61,107 @@ li {
 /* header styles */
 
 .header {
-  border: solid black;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
+/* header top styles */
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 30px; */
+}
+
+.search-box {
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.noti-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  margin-right: 20px;
+}
+
+.header-icon {
+  cursor: pointer;
+}
+
+input {
+  all: unset;
+  background-color: #e2e8f0;
+  border-radius: 10px;
+  width: 700px;
+  height: 25px;
+}
+
+.profile-pic-top {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+/* header bottom styles */
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.action-btns > button {
+  /* button style reset */
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
+  cursor: pointer;
+
+  display: inline-block;
+  background-color: #339dff;
+  color: white;
+  font-size: 1rem;
+  line-height: 38px;
+  border-radius: 50px;
+  width: 80px;
+  margin-right: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.profile-pic-bottom {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 70px;
+  width: 70px;
+}
+
+/* main styles (projects, announcements, trending) */
+
 .main {
-  border: solid black;
+  /* border: solid black; */
+  background-color: #e2e8f0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
